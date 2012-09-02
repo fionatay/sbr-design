@@ -1,0 +1,12 @@
+= form_tag '#', class: 'form-horizontal' do
+  .control-group
+    %label.control-label{:for => "inputFirstName"} First name
+    .controls
+      %input#inputFirstName{:placeholder => "First name", :type => "text"}
+  .control-group
+    %label.control-label{:for => "inputLastName"} Last name
+    .controls
+      %input#inputLastName{:placeholder => "Last name", :type => "text"}
+  .control-group
+    .controls
+      %button.btn{:type => "submit"} Submit your information

@@ -1,0 +1,55 @@
+%header.well
+  = image_tag 'twitter_ulock.jpeg', align: 'left', width: '300px'
+  %h1 Fight bike theft
+  .info
+    Stolen Bike Registry is a free resource to register and track stolen bicycles. It is run by tech-savvy people who love their bikes and hate the people who steal them.
+  = link_to('Report a stolen bike', new_registration_path, class: 'btn btn-info')
+  = link_to('Search theft reports', '#', class: 'btn btn-info')
+
+.row
+  .well.span4
+    %h3 Contribute to Stolenbikeregistry
+    I'm looking for people to work on features X, Y, Z. Hear about our latest updates at
+    = link_to 'Blog', '#'
+  .well.span4
+    %h3 Retweet us
+    SBR maintains Twitter accounts that automatically tweets out new reported thefts from those cities. Follow and retweet us:
+    %ul
+      %li
+        Tucson:
+        %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/stolenbikestuc"} San Francisco
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      %li
+        San Francisco:
+        %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/stolenbikestuc"} Tucson
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  .span3
+    %script{:charset => "utf-8", :src => "http://widgets.twimg.com/j/2/widget.js"}
+    :javascript
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 4,
+        interval: 30000,
+        width: 250,
+        height: 300,
+        theme: {
+          shell: {
+            background: '#333333',
+            color: '#ffffff'
+          },
+          tweets: {
+            background: '#fff',
+            color: '#000',
+            links: '#aae'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          behavior: 'all'
+        }
+      }).render().setUser('stolenbikessfo').start();

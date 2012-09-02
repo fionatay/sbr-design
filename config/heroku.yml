@@ -1,0 +1,5 @@
+production:
+  app: sbr-design
+  stack: cedar
+  config:
+    BUNDLE_WITHOUT: "development:test"

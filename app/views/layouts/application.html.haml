@@ -1,0 +1,29 @@
+%html
+  %head
+    %title stolenbicycleregistry.com
+    = stylesheet_link_tag "application"
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        %ul.nav.span9
+          %li
+            = link_to 'stolenbikeregistry', root_path
+          %li
+            = link_to 'how it works', '#'
+          %li
+            = link_to 'register a stolen bike', new_registration_path
+          %li
+            = link_to 'search', '#'
+          %li
+            %a{:href => "http://blog.stolenbicycleregistry.com", :target => "_new"} blog
+          %li
+            = link_to 'faq', '#'
+          %li
+            = link_to 'more resources', '#'
+        .login.span4
+          = form_tag '#', class: 'form-inline' do
+            = email_field_tag 'Email', '', class: 'input-small', placeholder: 'Email'
+            = password_field_tag 'Password', '', class: 'input-small', placeholder: 'Password'
+            = submit_tag 'Sign In', class: 'btn'
+
+    .container= yield
