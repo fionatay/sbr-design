@@ -2,6 +2,7 @@
   %head
     %title stolenbicycleregistry.com
     = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -20,7 +21,7 @@
             = link_to 'faq', '#'
           %li
             = link_to 'more resources', '#'
-        .login.span4
+        .login.pull-right.span4
           = form_tag '#', class: 'form-inline' do
             = email_field_tag 'Email', '', class: 'input-small', placeholder: 'Email'
             = password_field_tag 'Password', '', class: 'input-small', placeholder: 'Password'

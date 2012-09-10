@@ -8,5 +8,11 @@
 %p
   Once you submit this form, you will be emailed a link that will let you edit this listing after the fact.
 .alert.alert-danger
-  Are you registering a motorcycle, moped, or scooter? THEN STOP! If you are registering a stolen motorcycle, moped, or scooter, go to www.stolenmotorcycleregistry.com instead!
+  %p
+    %icon.icon-warning-sign
+    Are you registering a motorcycle, moped, or scooter? THEN STOP!
+
+  If you are registering a stolen motorcycle, moped, or scooter, go to
+  = link_to('www.stolenmotorcycleregistry.com','#')
+  instead!
 = render 'form'

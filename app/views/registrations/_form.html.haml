@@ -1,12 +1,43 @@
 = form_tag '#', class: 'form-horizontal' do
+  %section.user
+    %h3 Your information
+    .control-group
+      %label.control-label{:for => "inputFirstName"} First name
+      .controls
+        %input#inputFirstName{placeholder: "First name", type: "text"}
+    .control-group
+      %label.control-label{for: "inputLastName"} Last name
+      .controls
+        %input#inputLastName{placeholder: "Last name", type: "text"}
+    .control-group
+      %label.control-label Disclosure settings
+      .controls
+        %label.checkbox
+          %input#showFN{type: "checkbox"}
+          Show my first name
+        %label.checkbox
+          %input#showFN{type: "checkbox"}
+          Show my last name
+        %label.checkbox
+          %input#showFN{type: "checkbox"}
+          Show my email
+    .control-group
+      %label.control-label Country
+      .controls
+        %select
+          %option Country 1
+          %option Country 2
+  %section.bike
+    %h3 Bike information
+    .control-group
+      %label.control-label Date stolen
+      .controls
+        %input{type: 'text', data: {presents: 'hasDatePicker'}}
+
+    .control-group
+      %label.control-label{for: "inputFirstName"} Serial number
+      .controls
+        %input#inputFirstName{placeholder: "Serial number", type: "text"}
   .control-group
-    %label.control-label{:for => "inputFirstName"} First name
     .controls
-      %input#inputFirstName{:placeholder => "First name", :type => "text"}
-  .control-group
-    %label.control-label{:for => "inputLastName"} Last name
-    .controls
-      %input#inputLastName{:placeholder => "Last name", :type => "text"}
-  .control-group
-    .controls
-      %button.btn{:type => "submit"} Submit your information
+      %button.btn{type: "submit"} Submit your information
