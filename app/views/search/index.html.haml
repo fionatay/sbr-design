@@ -1,0 +1,46 @@
+%h2 Search by serial number
+
+%h4 Exact matches
+%table.table.table-condensed.table-bordered
+  %thead
+    %tr
+      %th Serial
+      %th Date stolen
+      %th Location
+      %th Brand
+      %th Model
+      %th Year
+      %th Reward
+  %tbody
+    - 1.times do
+      %tr
+        %td 123
+        %td= Date.parse('2012-01-01')
+        %td San Diego, CA
+        %td Cannondale
+        %td Fixie
+        %td 2012
+        %td
+
+%h4 Close matches
+%table.table.table-condensed.table-bordered
+  %thead
+    %tr
+      %th Serial
+      %th Date stolen
+      %th Location
+      %th Brand
+      %th Model
+      %th Year
+      %th Reward
+  %tbody
+    - 2.times do
+      %tr
+        %td 1123456
+        %td= Date.parse('2012-01-01')
+        %td San Diego, CA
+        %td Cannondale
+        %td Fixie
+        %td 2012
+        %td
+

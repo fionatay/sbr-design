@@ -1,0 +1,12 @@
+.alert.alert-info
+  %h4 Are you a bike shop?
+  If so, I would love to hear from you and get your input. Email me at bhance@gmail.com and I'll send you some free 'Death to bike thieves' stickers!
+
+%h2 Search by serial number
+
+= form_tag("/search", method: 'get', class: 'form-horizontal') do
+  .control-group
+    %label.control-label{:for => "serialNumber"} Enter your serial number
+    .controls
+      = text_field_tag 'serialNumber', nil, placeholder: '1234'
+      = submit_tag 'Submit', class: 'btn'

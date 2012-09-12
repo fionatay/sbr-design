@@ -1,3 +1,25 @@
+$lightblue: #add8e6;
+
 .well {
   background-color: white;
+}
+
+.alert-info {
+  background-color: #EEE;
+  border-color: #444;
+  color: #444;
+}
+
+.alert {
+  border: 1px solid;
+}
+
+.table {
+  thead {
+    background-color: $lightblue;
+
+  }
+  tbody {
+    background-color: #fff
+  }
 }

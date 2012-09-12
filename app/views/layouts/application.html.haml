@@ -2,7 +2,7 @@
   %head
     %title stolenbicycleregistry.com
     = stylesheet_link_tag "application"
-    = javascript_include_tag "application"
+    - javascript_include_tag "application"
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -14,17 +14,18 @@
           %li
             = link_to 'register a stolen bike', new_registration_path
           %li
-            = link_to 'search', '#'
+            = link_to 'search', new_search_path
           %li
-            %a{:href => "http://blog.stolenbicycleregistry.com", :target => "_new"} blog
-          %li
-            = link_to 'faq', '#'
-          %li
-            = link_to 'more resources', '#'
+            = link_to 'blog', 'http://blog.stolenbicycleregistry.com'
         .login.pull-right.span4
           = form_tag '#', class: 'form-inline' do
             = email_field_tag 'Email', '', class: 'input-small', placeholder: 'Email'
             = password_field_tag 'Password', '', class: 'input-small', placeholder: 'Password'
             = submit_tag 'Sign In', class: 'btn'
+    .container
+      = yield
+      #push
 
-    .container= yield
+    %footer
+      .container
+        Copyright Bryan Hance.
